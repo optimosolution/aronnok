@@ -1,0 +1,81 @@
+/* included only when we don't want to use fonts from google server */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../font/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../font/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+.btn_green{
+    background-color: #00B050;
+    display: block;
+    color: #000;
+    padding: 3px 0px;
+    text-align: center;
+    border: 1px solid #333;
+    width: 80px;
+    height: 24px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.btn_yellow{
+    background-color: #FFFF00;
+    display: block;
+    color: #000;
+    padding: 3px 0px;
+    text-align: center;
+    border: 1px solid #333;
+    width: 80px;
+    height: 24px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.btn_red{
+    background-color: #FF0000;
+    display: block;
+    color: #000;
+    padding: 3px 0px;
+    text-align: center;
+    border: 1px solid #333;
+    width: 80px;
+    height: 24px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.btn_white{
+    background-color: #FFF;
+    display: block;
+    color: #000;
+    padding: 3px 0px;
+    text-align: center;
+    border: 1px solid #333;
+    width: 80px;
+    height: 24px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.btn_header{
+    background-color: #F2DEDE;
+    display: block;
+    color: #b94a48;
+    padding: 3px 0px;
+    text-align: center;
+    border: 1px solid #A90F06;
+    width: 80px;
+    height: 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.room_title{
+    white-space: nowrap;
+}
+.rerort_name{
+    font-size: 16px;
+    text-transform: uppercase;
+}
