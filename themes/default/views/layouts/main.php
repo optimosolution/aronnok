@@ -104,8 +104,8 @@
         <footer>
             <div class="container">
                 <div class="row footer_section_pre">
-                    <div class="span4">
-                        <h4>Aronnok Holiday Resort<span class="line"></span></h4>
+                    <div class="span5">
+                        <h4><?php echo Yii::app()->name; ?></h4>
                         <p>Rangamati Cantonment, Rangamati</p>
                         <p>Mobile: +880 1769 312021-2  <br />Contact: <a href="mailto:contact@aronnok.com" style="color:white;">contact@aronnok.com</a><br />Booking: <a href="mailto:booking@aronnok.com" style="color:white;">booking@aronnok.com</a>  </p>
                         <ul data-facebook-action="recommend" data-url="#" class="socialcount socialcount-small recommend grade-a">
@@ -116,7 +116,7 @@
                         <br />
                         <p class="copy" >&copy; <?php echo Yii::app()->name; ?> <?php echo date('Y'); ?>.</p>
                     </div>
-                    <div class="span4">
+                    <div class="span3">
                         <h4>Quick Links</h4>
                         <ul class="">
                             <li><?php echo CHtml::link('Resorts', array('resort/index'), array('class' => '', 'style' => 'color:#FFF;')); ?></li> 

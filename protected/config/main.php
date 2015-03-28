@@ -4,7 +4,7 @@
 //Yii::setPathOfAlias('yiiwheels', dirname(__FILE__) . '/../extensions/yiiwheels');
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'Aronnok Holiday Resort',
+    'name' => 'Aronnok & Lakeshore Holiday Resort',
     //Default time zone
     'timeZone' => 'Asia/Dhaka',
     //Default source language
