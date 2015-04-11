@@ -114,7 +114,7 @@ class Room extends CActiveRecord {
             return $value->title;
         }
     }
-    
+
     public static function getRent($id) {
         $value = Room::model()->findByAttributes(array('id' => $id));
         if (empty($value->rent)) {
@@ -141,6 +141,24 @@ class Room extends CActiveRecord {
         } else {
             echo CHtml::image(Yii::app()->baseUrl . '/uploads/images/resort.jpg', 'Picture', array('alt' => $value->title, 'class' => 'thumbnail', 'title' => $value->title, 'style' => ''));
         }
+    }
+
+    public static function get_room_list($controller, $field, $id) {
+        $rValue = Yii::app()->db->createCommand()
+                ->select('id,resort,title')
+                ->from('{{room}}')
+                ->order('title')
+                ->queryAll();
+        echo '<select id="' . $controller . '_' . $field . '" name="' . $controller . '[' . $field . ']" class="span5">';
+        echo '<option value="">--select room--</option>';
+        foreach ($rValue as $key => $values) {
+            if ($values["id"] == $id) {
+                echo '<option selected="selected" value="' . $values["id"] . '" class="' . $values["resort"] . '">' . $values["title"] . '</option>';
+            } else {
+                echo '<option value="' . $values["id"] . '" class="' . $values["resort"] . '">' . $values["title"] . '</option>';
+            }
+        }
+        echo '</select>';
     }
 
 }

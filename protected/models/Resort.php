@@ -112,9 +112,9 @@ class Resort extends CActiveRecord {
         $value = Resort::model()->findByAttributes(array('id' => $id));
         $filePath = Yii::app()->basePath . '/../uploads/images/' . $value->picture;
         if ((is_file($filePath)) && (file_exists($filePath))) {
-            echo CHtml::image(Yii::app()->baseUrl . '/uploads/images/' . $value->picture, 'Picture', array('alt' => $value->resort, 'class' => 'thumbnail', 'title' => $value->resort, 'style' => ''));
+            echo CHtml::image(Yii::app()->baseUrl . '/uploads/images/' . $value->picture, 'Picture', array('alt' => $value->resort, 'class' => 'thumbnail', 'title' => $value->resort, 'style' => 'width:150px;'));
         } else {
-            echo CHtml::image(Yii::app()->baseUrl . '/uploads/images/resort.jpg', 'Picture', array('alt' => $value->resort, 'class' => 'thumbnail', 'title' => $value->resort, 'style' => ''));
+            echo CHtml::image(Yii::app()->baseUrl . '/uploads/images/resort.jpg', 'Picture', array('alt' => $value->resort, 'class' => 'thumbnail', 'title' => $value->resort, 'style' => 'width:150px;'));
         }
     }
 

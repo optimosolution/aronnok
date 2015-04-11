@@ -8,6 +8,11 @@ $this->pageTitle = 'Add Room - ' . Yii::app()->name;
 $this->breadcrumbs = array(
     'Add Room',
 );
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile(Yii::app()->theme->baseUrl . '/assets/js/jquery.chained.js', CClientScript::POS_END);
+Yii::app()->clientScript->registerScript('chain-select', " 
+    $('#ReservationItem_room').chained('#ReservationItem_resort');
+");
 ?>
 <div class="widget-box">
     <div class="widget-header">

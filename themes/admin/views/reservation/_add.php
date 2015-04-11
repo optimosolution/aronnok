@@ -13,7 +13,9 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 <p class="help-block">Fields with <span class="required">*</span> are required.</p>
 <?php echo $form->errorSummary($model); ?>
 <?php echo $form->dropDownListControlGroup($model, 'resort', CHtml::listData(Resort::model()->findAll(array('condition' => '', "order" => "resort")), 'id', 'resort'), array('empty' => '--select resort--', 'class' => 'span5')); ?>
-<?php echo $form->dropDownListControlGroup($model, 'room', CHtml::listData(Room::model()->findAll(array('condition' => '', "order" => "title")), 'id', 'title'), array('empty' => '--select room--', 'class' => 'span5')); ?>
+<?php //echo $form->dropDownListControlGroup($model, 'room', CHtml::listData(Room::model()->findAll(array('condition' => '', "order" => "title")), 'id', 'title'), array('empty' => '--select room--', 'class' => 'span5')); ?>
+<?php echo $form->labelEx($model, 'room'); ?>
+<?php echo Room::get_room_list('ReservationItem', 'room', $model->room); ?>
 <div class="row-fluid">
     <div class="span3">
         <?php echo $form->labelEx($model, 'date'); ?>
